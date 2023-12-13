@@ -19,6 +19,14 @@
                 <li><a href="#indicator">Scroll Indikator</a></li>
                 <li><a href="#slider">Radio Button Slider</a></li>
             </ul>
+            <h2>
+                <a href="#klemm">Paul Klemm</a>
+            </h2>
+            <ul>
+                <li><a href="#clock">Drehende Uhr</a></li>
+                <li><a href="#indicator">Hover Effect</a></li>
+                <li><a href="#slider">CSS Filter</a></li>
+            </ul>
         </div>
     </nav>
 </header>
@@ -173,6 +181,184 @@
             </div>
         </div>
     </div>
+<!----------------------------------------------Paul Klemm---------------------------------------------------------------------->
+    <div id="klemm">
+        <h2>Paul Klemm</h2>
+<!----------------------------------------------Drehende Uhr---------------------------------------------------------------------->
+        <div id="clock">
+            <h3>Drehende Uhr</h3>
+            <div class="klemm container">
+                <div class="klemm code">
+                    <code>
+                        <pre>
+.klemm.example{
+    background-color: #234e8f;
+}
+.clock {
+    height: 400px;
+    width: 400px;
+    
+    position: relative;
+    background: white;
+    box-sizing: border-box;
+    border-radius: 100%;
+    border: 40px solid #ff0000;
+    
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+.clock .twelve {
+    position: absolute;
+    width: 12px;
+    height: 20px;
+    background: #262626;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+.clock .three {
+    position: absolute;
+    width: 20px;
+    height: 6px;
+    background: #262626;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto 0;
+}
+.clock .six {
+    position: absolute;
+    width: 12px;
+    height: 20px;
+    background: #262626;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+}
+.clock .nine {
+    position: absolute;
+    width: 20px;
+    height: 6px;
+    background: #262626;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto 0;
+}
+.clock .center {
+    height: 12px;
+    width: 12px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #262626;
+    border-radius: 100%;
+}
+
+.clock .hour {
+    width: 6px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    animation: time 3600s infinite linear;
+}
+.clock .hour:before {
+    position: absolute;
+    content: "";
+    background: #262626;
+    height: 100px;
+    width: 6px;
+    top: 80px;
+}
+.clock .minute {
+    width: 2px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    animation: time 60s infinite linear;
+}
+.clock .minute:before {
+    position: absolute;
+    content: "";
+    background: #262626;
+    height: 160px;
+    width: 4px;
+    top: 20px;
+}
+.clock .second {
+    width: 4px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    animation: time 2s infinite linear;
+}
+.clock .second:before {
+    position: absolute;
+    content: "";
+    background: #ff0000;
+    height: 160px;
+    width: 2px;
+    top: 20px;
+}
+@keyframes time {
+    to {
+        transform: rotate(360deg);
+    }
+}
+                        </pre>
+                    </code>
+
+                </div>
+                <div class="klemm example">
+                    
+                                <div class="clock">
+                                    <div class="twelve"></div>
+                                    <div class="three"></div>
+                                    <div class="six"></div>
+                                    <div class="nine"></div>
+                                    <div class="center"></div>
+                                    <div class="hour"></div>
+                                    <div class="minute"></div>
+                                    <div class="second"></div>
+                                  </div>
+            
+                      
+                </div>
+            </div>
+            <div class="klemm description">
+                <ol>
+                    <li>
+                        <h5>Uhr</h5>
+                        <p>Die Uhr an sich ist sehr simpel nur aus div's für den Rand, den Mittelpunkt und die Indexzeichen aufgebaut</p>
+                    </li>
+                    <li>
+                        <h5>Zeiger</h5>
+                        <p>Die Zeiger sind absolut in der Uhr positionierte div's. In diesen wird ein div mit den Abmessungen des Zeigers eingefügt und ein top abstand gewählt damit sie über die Mitte ragen</p>
+                    </li>
+                    <li>
+                        <h5>Bewegung</h5>
+                        <p>Die Bewegung ist eine einfache animation die nur das keyframe: <code>transform: rotate(360deg);</code> verwendet. Die Länge der Animation bestimmt wie schnell sich die Zeiger drehen.</p>
+                    </li>
+                    
+                </ol>
+            </div>
+        </div>
+<!----------------------------------------------Ende Drehende Uhr---------------------------------------------------------------------->
+    </div>
+<!---------------------------------------------- Ende Paul Klemm---------------------------------------------------------------------->
 </body>
 
 </html>
