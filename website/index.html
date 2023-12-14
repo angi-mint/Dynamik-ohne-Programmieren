@@ -18,6 +18,7 @@
                 <li><a href="#cube">3D Foto Würfel</a></li>
                 <li><a href="#indicator">Scroll Indikator</a></li>
                 <li><a href="#slider">Radio Button Slider</a></li>
+                <li><a href="#hours">Graph Card</a></li>
             </ul>
             <h2>
                 <a href="#klemm">Paul Klemm</a>
@@ -36,15 +37,17 @@
         </div>
     </nav>
 </header>
+<!----------------------------------------------Linh Weiss---------------------------------------------------------------------->
+
 <div class="scroll-indicator"></div>
-    <div id="weiss">
-        <h2>Linh Weiss</h2>
-        <div id="cube">
-            <h3>3D Foto Würfel</h3>
-            <div class="weiss container">
-                <div class="weiss code">
-                    <code>
-                        <pre>
+<div id="weiss">
+    <h2>Linh Weiss</h2>
+    <div id="cube">
+        <h3>3D Foto Würfel</h3>
+        <div class="weiss container">
+            <div class="weiss code">
+                    <pre>
+                        <code>
 * {
     --image-1: url("/css-only/assets/sunset1.jpg");
     --image-2: url("/css-only/assets/sunset2.jpg");
@@ -135,58 +138,460 @@
 .radio-button:nth-child(6):checked ~ .cube {
     transform: rotateX(75deg) rotateY(0deg);
 }
-                        </pre>
-                    </code>
+                        </code>
+                    </pre>
+            </div>
+            <div class="weiss example">
+                <div class="photo-cube">
+                    <div class="cube-container">
+                        <input class="radio-button" type="radio" id="c1" name="sides" checked>
+                        <input class="radio-button" type="radio" id="c2" name="sides">
+                        <input class="radio-button" type="radio" id="c3" name="sides">
+                        <input class="radio-button" type="radio" id="c4" name="sides">
+                        <input class="radio-button" type="radio" id="c5" name="sides">
+                        <input class="radio-button" type="radio" id="c6" name="sides">
 
-                </div>
-                <div class="weiss example">
-                    <div class="photo-cube">
-                        <div class="cube-container">
-                            <input class="radio-button" type="radio" id="c1" name="sides" checked>
-                            <input class="radio-button" type="radio" id="c2" name="sides">
-                            <input class="radio-button" type="radio" id="c3" name="sides">
-                            <input class="radio-button" type="radio" id="c4" name="sides">
-                            <input class="radio-button" type="radio" id="c5" name="sides">
-                            <input class="radio-button" type="radio" id="c6" name="sides">
-
-                            <div class="cube">
-                                <div class="cube-side"></div>
-                                <div class="cube-side"></div>
-                                <div class="cube-side"></div>
-                                <div class="cube-side"></div>
-                                <div class="cube-side"></div>
-                                <div class="cube-side"></div>
-                            </div>
+                        <div class="cube">
+                            <div class="cube-side"></div>
+                            <div class="cube-side"></div>
+                            <div class="cube-side"></div>
+                            <div class="cube-side"></div>
+                            <div class="cube-side"></div>
+                            <div class="cube-side"></div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="weiss description">
-                <ol>
-                    <li>
-                        <h5>Variablen</h5>
-                        <p>Die Variablen <code>image-1</code> bis <code>image-6</code> enthalten die URLS der Bilder und <code>size</code> beschreibt die Größe des Würfels.</p>
-                    </li>
-                    <li>
-                        <h5>Klassen: photo-cube und cube-container</h5>
-                        <p><code>photo-cube</code> zentriert den Würfel und die Radio-Buttons. <code>cube-container</code> steuert die Größe und Perspektive des Würfels. Hierfür wird <code>perspective</code>, verwendet, dieser Wert beschreibt wie weit das Objekt entfernt ist.</p>
-                    </li>
-                    <li>
-                        <h5>Klassen: cube und cube-side</h5>
-                        <p>Hier werden die Eigenschaften des Würfel und dessen Seiten eingestellt. <code>transform-style: preserve-3d</code> gibt an das die Kinder des Elements im 3D-Raum positioniert werden sollen.</p>
-                    </li>
-                    <li>
-                        <h5>Radio Buttons und deren Selektoren</h5>
-                        <p>Die Radio-Buttons aktivieren verschiedene Transformationszustände, sobald sie ausgewählt werden.
-                            <code>rotateX(Winkel)</code> dreht das Element um die X-Achse während, <code>rotateY(Winkel)</code> das Element um die Y-Achse dreht.<br>
-                            Der Winkel beschreibt hier den Rotationswinkel, ein positiver Winkel steht für eine Drehung im Uhrzeigersinn, ein negativer Winkel für eine Drehung gegen den Uhrzeigersinn.<br>
-                            <code>translateZ(Länge)</code>verschiebt die einzelnen Seiten des Würfels, die Länge ist hier die Hälfte von <code>size</code>. Dadurch wird die Würfel-Seite in Richtung des Betrachters verschoben.<br>
-                            Durch die Kombination von Rotation und Transformationen entsteht der Eindruck eines sich drehenden Würfels.</p>
-                    </li>
-                </ol>
-            </div>
+        </div>
+        <div class="weiss description">
+            <ol>
+                <li>
+                    <h5>Variablen</h5>
+                    <p>Die Variablen <code>image-1</code> bis <code>image-6</code> enthalten die URLS der Bilder und <code>size</code> beschreibt die Größe des Würfels.</p>
+                </li>
+                <li>
+                    <h5>Klassen: photo-cube und cube-container</h5>
+                    <p><code>photo-cube</code> zentriert den Würfel und die Radio-Buttons. <code>cube-container</code> steuert die Größe und Perspektive des Würfels. Hierfür wird <code>perspective</code>, verwendet, dieser Wert beschreibt wie weit das Objekt entfernt ist.</p>
+                </li>
+                <li>
+                    <h5>Klassen: cube und cube-side</h5>
+                    <p>Hier werden die Eigenschaften des Würfel und dessen Seiten eingestellt. <code>transform-style: preserve-3d</code> gibt an das die Kinder des Elements im 3D-Raum positioniert werden sollen.</p>
+                </li>
+                <li>
+                    <h5>Radio Buttons und deren Selektoren</h5>
+                    <p>Die Radio-Buttons aktivieren verschiedene Transformationszustände, sobald sie ausgewählt werden.
+                        <code>rotateX(Winkel)</code> dreht das Element um die X-Achse während, <code>rotateY(Winkel)</code> das Element um die Y-Achse dreht.<br>
+                        Der Winkel beschreibt hier den Rotationswinkel, ein positiver Winkel steht für eine Drehung im Uhrzeigersinn, ein negativer Winkel für eine Drehung gegen den Uhrzeigersinn.<br>
+                        <code>translateZ(Länge)</code>verschiebt die einzelnen Seiten des Würfels, die Länge ist hier die Hälfte von <code>size</code>. Dadurch wird die Würfel-Seite in Richtung des Betrachters verschoben.<br>
+                        Durch die Kombination von Rotation und Transformationen entsteht der Eindruck eines sich drehenden Würfels.</p>
+                </li>
+            </ol>
         </div>
     </div>
+    <div id="indicator">
+        <h3>Scroll Indikator</h3>
+        <div class="weiss container">
+            <div class="weiss code">
+                    <pre>
+                        <code>
+@supports (height: 100vh) {
+    .scroll-indicator {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: linear-gradient(to right top, #e4514f, #5400ff 50%, transparent 50%) no-repeat;
+        z-index: -1;
+        background-size: 100% calc(100% - 100vh + 3px);
+    }
+    .scroll-indicator:before {
+        content: "";
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        top: 3px;
+    }
+}
+                        </code>
+                    </pre>
+            </div>
+            <div class="weiss example">
+                <p>Das Beispiel für den Scroll Indikator is oben auf der Website zu erkennen.
+                    <br>Hier ist eine Kopie des ganzen Hintergrundes zu erkennen.</p>
+
+                <input type="checkbox" id="transparent" checked>
+                <label for="transparent">transparent 50%</label>
+
+                <input type="checkbox" id="viewport" checked>
+                <label for="viewport">-100vh</label>
+
+                <input type="checkbox" id="width" checked>
+                <label for="width">width: 100% und height: 100%</label>
+
+                <div class="indicator-changer"></div>
+            </div>
+        </div>
+        <div class="weiss description">
+            <ol>
+                <li>
+                    <h5><code>.scroll-indicator</code> Regel</h5>
+                    <p>Mit <code>position: absolute</code> wird das Element aus dem normalen Dokumentfluss entfernt. Das ermöglicht es den Scroll Indikator mit <code>top:0</code> und <code>left:0</code> oben links zu platzieren.</p>
+                </li>
+                <li>
+                    <h5>Hintergrundfarbe</h5>
+                    <p><code>background: linear-gradient(to right top, #e4514f, #5400ff 50%, transparent 50%) no-repeat;</code> erstellt einen Farbverlauf von unten links nach oben rechts, bei 50% des Verlaufs ändert sich die Farbe zu transparent. <code>no-repeat</code> bestimmt das es der Hintergrund nicht wiederholt werden soll.</p>
+                </li>
+                <li>
+                    <h5>Hintergrundgröße</h5>
+                    <p><code>background-size: 100% calc(100% - 100vh + 3px);</code> bestimmt die Hintergrundgröße des Elements, 100% der Breite soll dieser einnehmen. Die Höhe beträgt hier 100%, minus die Höhe eines ganzen Viewports plus die Höhe des Indikators. </p>
+                </li>
+                <li>
+                    <h5>Pseudo-Element</h5>
+                    <p><code>.scroll-indicator:after</code> erstellt ein Pseudo-Element, dieses Element hat einen leeren Inhalt und wird hinter dem <code>.scroll-indidactor</code>-Element eingefügt.<br>Mit einer Höhe und Breite von jeweils 100% und einem Abstand von 3px zum oberen Rand des Browserfensters bleibt es mittels <code>position:fixed</code> stets an dieser Stelle verankert, unabhängig davon, wo sich der Betrachter auf der Seite befindet. Dadurch entsteht ein kontinuierlicher kleiner Freiraum für den Hintergrund dieses Elements.</p>
+                </li>
+            </ol>
+        </div>
+    </div>
+    <div id="slider">
+        <h3>Radio Button Slider</h3>
+        <div class="weiss container">
+            <div class="weiss code">
+                    <pre>
+                        <code>
+.slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sides{
+    display: flex;
+    position: relative;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, .2) 0 60px 40px -7px;
+    padding: 0.75rem;
+    border-radius: 10px;
+}
+
+.sides * {
+    z-index: 2;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.side {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+    transition: color .15s ease-in;
+    font-size: 50px;
+    font-family: Castellar, sans-serif;
+}
+
+input[type="radio"]:checked + label {
+    color: white;
+}
+
+input[id="1"]:checked ~ .slider {
+    transform: translateX(0);
+}
+
+input[id="2"]:checked ~ .slider {
+    transform: translateX(100%);
+}
+
+input[id="3"]:checked ~ .slider {
+    transform: translateX(200%);
+}
+
+input[id="4"]:checked ~ .slider {
+    transform: translateX(300%);
+}
+
+input[id="5"]:checked ~ .slider {
+    transform: translateX(400%);
+}
+
+input[id="6"]:checked ~ .slider {
+    transform: translateX(500%);
+}
+
+.slider {
+    position: absolute;
+    display: flex;
+    height: 100px;
+    width: 100px;
+    background-color: #acabb0;
+    background-image: linear-gradient(315deg, #acabb0 0%, #e01c34 74%);
+    color: white;
+    border-radius: 10px;
+    z-index: 1;
+    transition: .25s ease-out;
+}
+                        </code>
+                    </pre>
+            </div>
+            <div class="weiss example">
+                <div class="slider-container">
+                    <div class="sides">
+                        <input type="radio" id="1" name="slider" checked>
+                        <label class="side" for="1">1</label>
+                        <input type="radio" id="2" name="slider">
+                        <label class="side" for="2">2</label>
+                        <input type="radio" id="3" name="slider">
+                        <label class="side" for="3">3</label>
+                        <input type="radio" id="4" name="slider">
+                        <label class="side" for="4">4</label>
+                        <input type="radio" id="5" name="slider">
+                        <label class="side" for="5">5</label>
+                        <input type="radio" id="6" name="slider">
+                        <label class="side" for="6">6</label>
+                        <span class="slider"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="weiss description">
+            <ol>
+                <li>
+                    <h5><code>.slider-container {...}</code></h5>
+                    <p>Der Container wird positioniert, und gibt das Layout für die Kinder-Elemente vor, es wird flexbox verwendet und die einzelnen Kinder werden zentriert.</p>
+                </li>
+                <li>
+                    <h5><code>.sides {...}</code></h5>
+                    <p>Die einzelnen Buttons die sich in <code>.sides</code> befinden, werden mit flexbox in einer Reihe positioniert. <code>background-color, box-shadow, padding und border-radius</code> gestalten das Aussehen des Containers</p>
+                </li>
+                <li>
+                    <h5><code>.sides * { z-index: 2;}</code> und <code>.sides input[type="radio"] { display: none; }</code></h5>
+                    <p>Mit <code>z-index:2</code> wird sichergestellt, dass die Labels (Zahlen 1-6) über dem Farb-Slider erscheinen. <code>display: none</code> versteckt die originalen Radio-Buttons.</p>
+                </li>
+                <li>
+                    <h5><code>.side {...}</code> und <code>input[type="radio"]:checked + label { color: white; }</code></h5>
+                    <p>Definiert wird das Aussehen der Labels.</p>
+                </li>
+                <li>
+                    <h5><code>input[id="1"]:checked ~ .slider { transform: translateX(0); }</code> etc.</h5>
+                    <p>Verwendet Transform, um die Position des Sliders zu ändern, abhängig davon, welcher Radio-Button ausgewählt ist.</p>
+                </li>
+                <li>
+                    <h5><code>.slider {...}</code> etc.</h5>
+                    <p>Definiert das Aussehen des Sliders (Farbiges Quadrat).</p>
+                </li>
+            </ol>
+        </div>
+    </div>
+    <div id="hours">
+        <h3>Graph Card</h3>
+        <div class="weiss container">
+            <div class="weiss code">
+                <pre>
+                    <code>
+.card {
+    background-color: black;
+    width: 250px;
+    height: 300px;
+    border-radius: 10px;
+    perspective: 1500px;
+    transition: transform .5s ease-in-out, box-shadow .5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transform-style: preserve-3d;
+    box-shadow: 5px 5px 25px 0 rgba(0, 0, 0, .2);
+}
+
+.card h2, .card h3 {
+    transform: translateZ(2px);
+    color: white;
+    transition: transform .5s ease-in-out, opacity .5s ease-in-out;
+}
+
+.card .chart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-style: preserve-3d;
+    transition: transform .5s ease-in-out;
+}
+
+.card .photo {
+    position: absolute;
+    transform: translateZ(1px);
+    background: url("assets/laptop.jpg") no-repeat center center;
+    background-size: cover;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform .5s ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.card .photo:after {
+    position: absolute;
+    content: " ";
+    display: block;
+    background-color: rgba(0, 0, 0, .2);
+    transition: background-color .5s ease-in-out;
+}
+
+.card .bar {
+    will-change: height;
+    width: 15px;
+    height: 1px;
+    transform-origin: bottom;
+    transition: height 0.5s ease-in-out, margin 0.5s ease-in-out, transform 0.5s ease-in-out;
+    transform-style: flat;
+    margin: 7px; /* Abstand zwischen den Balken*/
+    position: relative;
+    background: white linear-gradient(to bottom, #cad3f9 0%, #d9caf9 0%, #caeaf9 100%);
+}
+
+.card .bar:after {
+    display: block;
+    content: "";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    transform: rotateY(90deg);
+    background: grey linear-gradient(to bottom, #feffff 0%, #85d7f7 0%, #4c8596 100%);
+}
+.card .bar:before {
+    display: block;
+    content: "";
+    height: 15px;
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    color: white;
+    text-align: center;
+    transition: color 0.3s ease-in-out;
+}
+
+.card .bar.bar1::before {
+    content: "M";
+}
+.card .bar.bar2::before {
+    content: "T";
+}
+.card .bar.bar3::before {
+    content: "W";
+}
+.card .bar.bar4::before {
+    content: "T";
+}
+.card .bar.bar5::before {
+    content: "F";
+}
+.card .bar span {
+    position: absolute;
+    transform: rotateZ(-90deg);
+    border-radius: 2px;
+    transform-origin: 0 100%;
+    top: 10px;
+    white-space: nowrap;
+    text-align: right;
+    left: 18px;
+    padding: 5px;
+    color: black;
+    font-size: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+#graph:checked + label +.card {
+    transform: rotateX(60deg) translateY(150px);
+    box-shadow: 0 30px 40px 0 rgba(0, 0, 0, 0.75);
+}
+#graph:checked + label + .card .chart {
+    transform: translateZ(40px) translatey(50px);
+}
+#graph:checked + label + .card .bar {
+    transform:  rotateX(-90deg);
+}
+#graph:checked + label + .card .bar.bar1 {
+    height: calc(4 * 20px);
+    transition-delay: 0.3s;
+    margin-top: calc(-4 * 20px);
+}
+#graph:checked + label + .card .bar.bar2 {
+    height: calc(7 * 20px);
+    transition-delay: 0.2s;
+    margin-top: calc(-7 * 20px);
+}
+#graph:checked + label + .card .bar.bar3 {
+    height: calc(10 * 20px);
+    transition-delay: 0.1s;
+    margin-top: calc(-10 * 20px);
+}
+#graph:checked + label + .card .bar.bar4 {
+    height: calc(8 * 20px);
+    transition-delay: .2s;
+    margin-top: calc(-8 * 20px);
+}
+#graph:checked + label + .card .bar.bar5 {
+    height: calc(5 * 20px);
+    transition-delay: 0.3s;
+    margin-top: calc(-5 * 20px);
+}
+
+#graph:checked + label + .card .bar span {
+    opacity: 1;
+    transition-delay: 0.3s;
+}
+#graph:checked + label + .card .photo {
+    transform: translateZ(20px);
+}
+
+#graph:checked + label + .card h2 {
+    opacity: 0;
+    transform: translateZ(40px) translateY(-100px);
+}
+#graph:checked + label + .card h3 {
+    transform: translateZ(60px) translateY(100px);
+}
+                    </code>
+                </pre>
+            </div>
+            <div class="weiss example">
+                <input type="checkbox" id="graph" value="graph">
+                <label for="graph">toggle details</label>
+                <div class="card">
+                    <div class="photo"></div>
+                    <h2>Hours spent</h2>
+                    <div class="chart">
+                        <div class="bar bar1"><span>4</span></div>
+                        <div class="bar bar2"><span>7</span></div>
+                        <div class="bar bar3"><span>10</span></div>
+                        <div class="bar bar4"><span>8</span></div>
+                        <div class="bar bar5"><span>5</span></div>
+                    </div>
+                    <h3>31</h3>
+                </div>
+            </div>
+        </div>
+        <div class="weiss description">
+            <ol>
+                <li>
+                    <h5><code>.card { ... }</code>, <code>.card h2, .card h3 { ... }</code> etc.</h5>
+                    <p>Hier wird das Erscheinungsbild der Karte definiert. <code>.card</code> gestaltet das Grundlayout: Größe, Hintergrundfarbe, abgerundete Ecken, Effekte für die 3D-Darstellung. Überschriften, Balkendiagramme und das Bild erhalten ebenfalls verschiedene Stildefinitionen, Transformationen, Übergangseffekte etc.</p>
+                </li>
+                <li>
+                    <h5><code>#graph:checked + label + .card { ... }</code></h5>
+                    <p>Hier wird angegeben wie sich die </p>
+                </li>
+            </ol>
+        </div>
+    </div>
+</div>
 <!----------------------------------------------Paul Klemm---------------------------------------------------------------------->
     <div id="klemm">
         <h2>Paul Klemm</h2>
@@ -195,8 +600,8 @@
             <h3>Drehende Uhr</h3>
             <div class="klemm container">
                 <div class="klemm code">
-                    <code>
-                        <pre>
+                    <pre>
+                        <code>
 .klemm.example{
     background-color: #234e8f;
 }
@@ -324,8 +729,8 @@
         transform: rotate(360deg);
     }
 }
-                        </pre>
-                    </code>
+                        </code>
+                    </pre>
 
                 </div>
                 <div class="klemm example">
@@ -377,8 +782,8 @@
             <h3>Lade-Animation</h3>
             <div class="breyer container">
                 <div class="breyer code">
-                    <code>
-                        <pre>
+                    <pre>
+                        <code>
 &lt;div class="page" head="Lade-Animation"&gt;
     &lt;div class="center"&gt;
         &lt;p&gt;Seite lädt...&lt;/p&gt;
@@ -411,8 +816,8 @@
         &lt;/svg&gt;
     &lt;/div&gt;
 &lt;/div&gt;
-                        </pre>
-                    </code>
+                        </code>
+                    </pre>
 
                 </div>
                 <div class="breyer example">
