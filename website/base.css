@@ -713,7 +713,7 @@ header {
   
   
   body {
-    background-image: url("Sterne.png");
+    background-image: url("assets/Sterne.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
