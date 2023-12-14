@@ -407,3 +407,62 @@ header {
 }
 /*----------------------------------------------Ende Drehende Uhr----------------------------------------------------------------------*/
 /*----------------------------------------------Ende Paul Klemm----------------------------------------------------------------------*/
+
+
+/*----------------------------------------------Corvin Breyer----------------------------------------------------------------------*/
+#breyer svg {
+    margin: 15px;
+    background: #fff;
+    display: block;
+}
+
+#breyer .content {
+    padding: 15px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#breyer .page {
+    --acc: #e64980;
+    height: 100%;
+    background: #212529;
+    position: relative;
+    overflow: hidden;
+}
+
+#breyer .page svg {
+    background: #0000;
+}
+
+#breyer .bgbars::before {
+    content: '';
+    position: absolute;
+    background: var(--acc);
+    transform: rotate(-22deg);
+    width: 90px;
+    height: 130%;
+}
+
+#breyer .center {
+    display: block;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+#breyer .center p {
+    margin-top: -20px;
+    text-align: center;
+    color: #f1f3f5;
+    font-size: 30px;
+}
+
+#breyer .info {
+    background: #fff;
+    font-size: 20px;
+    max-width: 60%;
+    margin: 0 auto;
+    outline: 10px solid #fff;
+}
+/*----------------------------------------------Ende Corvin Breyer----------------------------------------------------------------------*/
