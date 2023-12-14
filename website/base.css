@@ -434,15 +434,6 @@ header {
     background: #0000;
 }
 
-#breyer .bgbars::before {
-    content: '';
-    position: absolute;
-    background: var(--acc);
-    transform: rotate(-22deg);
-    width: 90px;
-    height: 130%;
-}
-
 #breyer .center {
     display: block;
     position: absolute;
