@@ -1459,7 +1459,92 @@ img {
         </ol>
      </div>
      </div>
-       
+        
+<div id="BurgerMENU">
+    <h3>Burger Menu</h3>
+    <div class="weiss container">
+        <div class="weiss code">
+             <pre>
+                 <code>
+.dropdown {
+    position: absolute;
+    top: 20px;
+    right: 20px; 
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    right: 0;
+  }
+  
+  .menu-item {
+    transition: color 0.3s, background-color 0.3s, padding 0.3s; /* Übergangsregeln hinzugefügt */
+  }
+  
+ 
+  .menu-item:hover {
+    color: white;
+    background-color: red;
+    padding: 8px;
+    border-radius: 4px;
+  }
+  
+  .dropdown-btn:focus + .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown-btn {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: none;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 3px 0;
+  }
+                </code>
+             </pre>
+        </div>
+        <div class="weiss example">
+            <div class="dropdown">
+    <button class="dropdown-btn">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </button>
+    <div class="dropdown-content">
+       <p class="menu-item">Das</p>
+       <p class="menu-item">ist</p>
+       <p class="menu-item">ein</p>
+       <p class="menu-item">Drop</p>
+       <p class="menu-item">Down</p>
+       <p class="menu-item">Menu</p>
+    </div>
+  </div>
+        </div>
+    </div>
+    <div class="weiss description">
+        <ol>
+            <li>
+                <h5></h5>
+                <p></p>
+            </li>
+        </ol>
+    </div>
+</div>
+ 
     </div>
 </body>
 
