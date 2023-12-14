@@ -27,6 +27,12 @@
                 <li><a href="#indicator">Hover Effect</a></li>
                 <li><a href="#slider">CSS Filter</a></li>
             </ul>
+            <h2>
+                <a href="#breyer">Corvin Breyer</a>
+            </h2>
+            <ul>
+                <li><a href="#loading">Lade-Animation</a></li>
+            </ul>
         </div>
     </nav>
 </header>
@@ -358,7 +364,116 @@
         </div>
 <!----------------------------------------------Ende Drehende Uhr---------------------------------------------------------------------->
     </div>
-<!---------------------------------------------- Ende Paul Klemm---------------------------------------------------------------------->
+    <!---------------------------------------------- Ende Paul Klemm---------------------------------------------------------------------->
+
+
+
+
+    <!----------------------------------------------Corvin Breyer---------------------------------------------------------------------->
+    <div id="breyer">
+        <h2>Corvin Breyer</h2>
+        <!----------------------------------------------Lade-Animation---------------------------------------------------------------------->
+        <div id="loading">
+            <h3>Lade-Animation</h3>
+            <div class="breyer container">
+                <div class="breyer code">
+                    <code>
+                        <pre>
+&lt;div class="page bgbars" head="Lade-Animation"&gt;
+    &lt;div class="center"&gt;
+        &lt;p&gt;Seite lädt...&lt;/p&gt;
+        &lt;svg width="400" height="100"&gt;
+            &lt;circle cx="25%" cy="50%" r="15" fill="#e64980"&gt;
+                &lt;animate attributeName="opacity" values="0;1;0" dur="4s" begin="1s" repeatCount="indefinite" /&gt;
+                &lt;animate attributeName="r" values="15;30;15" dur="2s" repeatCount="indefinite" /&gt;
+            &lt;/circle&gt;
+            &lt;circle cx="50%" cy="50" r="30" fill="#e64980"&gt;
+                &lt;animate attributeName="opacity" values="0;1;0" dur="4s" begin="0" repeatCount="indefinite" /&gt;
+                &lt;animate attributeName="r" values="30;15;30" dur="2s" repeatCount="indefinite" /&gt;
+            &lt;/circle&gt;
+            &lt;circle cx="75%" cy="50" r="15" fill="#e64980"&gt;
+                &lt;animate attributeName="opacity" values="0;1;0" dur="4s" begin="1s" repeatCount="indefinite" /&gt;
+                &lt;animate attributeName="r" values="15;30;15" dur="2s" repeatCount="indefinite" /&gt;
+            &lt;/circle&gt;
+
+            &lt;circle cx="25%" cy="50%" r="15" fill="#e64980"&gt;
+                &lt;animate attributeName="opacity" values="1;0;1" dur="2s" begin="1s" repeatCount="indefinite" /&gt;
+                &lt;animate attributeName="r" values="10;15;10" dur="4s" repeatCount="indefinite" /&gt;
+            &lt;/circle&gt;
+            &lt;circle cx="50%" cy="50" r="30" fill="#e64980"&gt;
+                &lt;animate attributeName="opacity" values="1;0;1" dur="2s" repeatCount="indefinite" /&gt;
+                &lt;animate attributeName="r" values="15;10;15" dur="4s" repeatCount="indefinite" /&gt;
+            &lt;/circle&gt;
+            &lt;circle cx="75%" cy="50" r="15" fill="#e64980"&gt;
+                &lt;animate attributeName="opacity" values="1;0;1" dur="2s" begin="1s" repeatCount="indefinite" /&gt;
+                &lt;animate attributeName="r" values="10;15;10" dur="4s" repeatCount="indefinite" /&gt;
+            &lt;/circle&gt;
+        &lt;/svg&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                        </pre>
+                    </code>
+
+                </div>
+                <div class="breyer example">
+
+                    <div class="page bgbars" head="Lade-Animation">
+                        <div class="center">
+                            <p>Seite lädt...</p>
+                            <svg width="400" height="100">
+                                <circle cx="25%" cy="50%" r="15" fill="#e64980">
+                                    <animate attributeName="opacity" values="0;1;0" dur="4s" begin="1s" repeatCount="indefinite" />
+                                    <animate attributeName="r" values="15;30;15" dur="2s" repeatCount="indefinite" />
+                                </circle>
+                                <circle cx="50%" cy="50" r="30" fill="#e64980">
+                                    <animate attributeName="opacity" values="0;1;0" dur="4s" begin="0" repeatCount="indefinite" />
+                                    <animate attributeName="r" values="30;15;30" dur="2s" repeatCount="indefinite" />
+                                </circle>
+                                <circle cx="75%" cy="50" r="15" fill="#e64980">
+                                    <animate attributeName="opacity" values="0;1;0" dur="4s" begin="1s" repeatCount="indefinite" />
+                                    <animate attributeName="r" values="15;30;15" dur="2s" repeatCount="indefinite" />
+                                </circle>
+
+                                <circle cx="25%" cy="50%" r="15" fill="#e64980">
+                                    <animate attributeName="opacity" values="1;0;1" dur="2s" begin="1s" repeatCount="indefinite" />
+                                    <animate attributeName="r" values="10;15;10" dur="4s" repeatCount="indefinite" />
+                                </circle>
+                                <circle cx="50%" cy="50" r="30" fill="#e64980">
+                                    <animate attributeName="opacity" values="1;0;1" dur="2s" repeatCount="indefinite" />
+                                    <animate attributeName="r" values="15;10;15" dur="4s" repeatCount="indefinite" />
+                                </circle>
+                                <circle cx="75%" cy="50" r="15" fill="#e64980">
+                                    <animate attributeName="opacity" values="1;0;1" dur="2s" begin="1s" repeatCount="indefinite" />
+                                    <animate attributeName="r" values="10;15;10" dur="4s" repeatCount="indefinite" />
+                                </circle>
+                            </svg>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="breyer description">
+                <ol>
+                    <li>
+                        <h5>Allgemein</h5>
+                        <p>Durch einfache aber effektiv eingesetzte Animationen von Kreisen lässt sich eine tolle Lade-Animation für Websites bauen. Neben den offensichtlichen äußeren Kreisen, sind allerdings auch die inneren Kreise animiert und ändern ebenfalls Radius bzw. Größe und Deckkraft, um der gesamten Animation ein interessanteres Aussehen zu verleihen.</p>
+                    </li>
+                    <li>
+                        <h5>Anwendungen</h5>
+                        <p>Die Animation kann gut für große Websites genutzt werden, um zum Beispiel die Ladezeit zu überbrücken und den Besucher "bei Stange" zu halten. Alternativ kann eine längere Ladezeit als benötigt vorgetäuscht werden und die Lade-Animation als Werbefläche benutzt werden. So können beispielsweise am unteren Ende der Seite "Fun Facts" oder Wissenswertes zu Produkten oder dem Unternehmen stehen, die Fläche könnte Produkte bewerben oder eine kleine Pause zwischen vielen Website-Inhalten bieten.</p>
+                    </li>
+                    <li>
+                        <h5>Funktion</h5>
+                        <p>Die Animation besteht aus zwei mal drei Kreisen, bei welchen mit Tags für die Animation von SVG-Formen über 4 bzw. 2 Sekunden der Radius (bzw. damit die Größe) und die Deckkraft geändert wird.</p>
+                    </li>
+
+                </ol>
+            </div>
+        </div>
+        <!----------------------------------------------Ende Lade-Animation---------------------------------------------------------------------->
+    </div>
+    <!---------------------------------------------- Ende Corvin Breyer---------------------------------------------------------------------->
 </body>
 
 </html>
