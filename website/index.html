@@ -1071,6 +1071,104 @@ input[id="6"]:checked ~ .slider {
         </div>
         <!----------------------------------------------Ende Element Highlights---------------------------------------------------------------------->
 
+
+        <!----------------------------------------------Fortschrittsbalken---------------------------------------------------------------------->
+        <div id="progress">
+            <h3>Fortschrittsbalken</h3>
+            <div class="breyer container">
+                <div class="breyer code">
+                    <pre>
+                        <code>
+&lt;div class="page bgbars" head="Fortschrittsbalken"&gt;
+    &lt;div class="center"&gt;
+        &lt;svg width="500" height="60"&gt;
+            &lt;rect width="100%" height="100%" fill="#eee" /&gt;
+
+            &lt;pattern id="diagonalStripes" width="10" height="10" patternUnits="userSpaceOnUse"&gt;
+                &lt;line x1="0" y1="0" x2="10" y2="10" stroke="#e64980" stroke-width="4"&gt;&lt;/line&gt;
+                &lt;line x1="-5" y1="5" x2="5" y2="15" stroke="#e64980" stroke-width="4"&gt;&lt;/line&gt;
+                &lt;line x1="5" y1="-5" x2="15" y2="5" stroke="#e64980" stroke-width="4"&gt;&lt;/line&gt;
+            &lt;/pattern&gt;
+
+            &lt;rect width="0%" height="100%" fill="url(#diagonalStripes)"&gt;
+                &lt;animate attributeName="width" from="0%" to="70%" dur="5s" fill="freeze" /&gt;
+            &lt;/rect&gt;
+        &lt;/svg&gt;
+        &lt;svg width="500" height="60"&gt;
+            &lt;rect width="100%" height="100%" fill="#e64980" /&gt;
+
+            &lt;pattern id="diagonalStripes2" width="10" height="10" patternUnits="userSpaceOnUse"&gt;
+                &lt;line x1="0" y1="0" x2="10" y2="10" stroke="#eee" stroke-width="4"&gt;&lt;/line&gt;
+                &lt;line x1="-5" y1="5" x2="5" y2="15" stroke="#eee" stroke-width="4"&gt;&lt;/line&gt;
+                &lt;line x1="5" y1="-5" x2="15" y2="5" stroke="#eee" stroke-width="4"&gt;&lt;/line&gt;
+            &lt;/pattern&gt;
+
+            &lt;rect width="0%" height="100%" fill="url(#diagonalStripes2)"&gt;
+                &lt;animate attributeName="width" from="0%" to="100%" dur="15s" repeatCount="indefinite" /&gt;
+            &lt;/rect&gt;
+        &lt;/svg&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                        </code>
+                    </pre>
+
+                </div>
+                <div class="breyer example">
+
+                    <div class="page bgbars" head="Fortschrittsbalken">
+                        <div class="center">
+                            <svg width="500" height="60">
+                                <rect width="100%" height="100%" fill="#eee" />
+
+                                <pattern id="diagonalStripes" width="10" height="10" patternUnits="userSpaceOnUse">
+                                    <line x1="0" y1="0" x2="10" y2="10" stroke="#e64980" stroke-width="4"></line>
+                                    <line x1="-5" y1="5" x2="5" y2="15" stroke="#e64980" stroke-width="4"></line>
+                                    <line x1="5" y1="-5" x2="15" y2="5" stroke="#e64980" stroke-width="4"></line>
+                                </pattern>
+
+                                <rect width="0%" height="100%" fill="url(#diagonalStripes)">
+                                    <animate attributeName="width" from="0%" to="70%" dur="5s" fill="freeze" />
+                                </rect>
+                            </svg>
+                            <svg width="500" height="60">
+                                <rect width="100%" height="100%" fill="#e64980" />
+
+                                <pattern id="diagonalStripes2" width="10" height="10" patternUnits="userSpaceOnUse">
+                                    <line x1="0" y1="0" x2="10" y2="10" stroke="#eee" stroke-width="4"></line>
+                                    <line x1="-5" y1="5" x2="5" y2="15" stroke="#eee" stroke-width="4"></line>
+                                    <line x1="5" y1="-5" x2="15" y2="5" stroke="#eee" stroke-width="4"></line>
+                                </pattern>
+
+                                <rect width="0%" height="100%" fill="url(#diagonalStripes2)">
+                                    <animate attributeName="width" from="0%" to="100%" dur="15s" repeatCount="indefinite" />
+                                </rect>
+                            </svg>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="breyer description">
+                <ol>
+                    <li>
+                        <h5>Allgemein</h5>
+                        <p>Mit einem Muster lässt sich im Handumdrehen ein Fortschrittsbalken allein mit SVG-Animationen zeigen. Der obere Balken wiederholt seine Animation beim Erreichen des rechten Endes, der untere Balken bleibt bei 70% der Länge stehen. Gegebenenfalls müssen Sie die Seite neu laden, um den Effekt zu sehen.</p>
+                    </li>
+                    <li>
+                        <h5>Anwendungen</h5>
+                        <p>Der obere Balken lässt sich gut als Ladebalken verwenden, wie auch in Beispiel 1 gezeigt und ausgeführt. Der untere Balken, welcher nach 70% anhält, lässt sich hervorragend als Fortschrittsbalken für ein größeres Projekt verwendet werden. Hier können zum Beispiel für eine Stadtplanung der Fortschritt der aktuellen Phase nicht nur angezeigt sondern auch mit einer Eingangsanimation versehen werden. Alternativ kann dieser Balken auch für eine Art Säule eines Balkendiagramms verwendet werden.</p>
+                    </li>
+                    <li>
+                        <h5>Funktion</h5>
+                        <p>Über ein den "pattern"-SVG-Tag wird zuerst der Hintergrund bzw. das Muster für den geladenen Teil des dynamischen Balkens festgelegt, dann wird dieses Muster über eine ID einem Rechteck zugewiesen. Da es sich um ein Muster handelt, welches automatisch den Inhalt auf die Größe des zugewiesenen Elements erweitert, werden hier keine Masken benötigt, sondern über die Animation einfach die Breite des dynamischen Balkens geändert.</p>
+                    </li>
+
+                </ol>
+            </div>
+        </div>
+        <!----------------------------------------------Ende Fortschrittsbalken---------------------------------------------------------------------->
+
         
     </div>
     <!---------------------------------------------- Ende Corvin Breyer---------------------------------------------------------------------->
