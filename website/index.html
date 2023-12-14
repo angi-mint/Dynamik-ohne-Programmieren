@@ -8,8 +8,8 @@
 
 <body>
 <header>
+    <h1>Projekt: Dynamik ohne Programmieren</h1>
     <nav>
-        <h1>Projekt: Dynamik ohne Programmieren</h1>
         <div>
             <h2>
                 <a href="#weiss">Linh Weiss</a>
@@ -20,24 +20,36 @@
                 <li><a href="#slider">Radio Button Slider</a></li>
                 <li><a href="#hours">Graph Card</a></li>
             </ul>
+        </div>
+        <div>
             <h2>
                 <a href="#klemm">Paul Klemm</a>
             </h2>
             <ul>
                 <li><a href="#clock">Drehende Uhr</a></li>
-                <li><a href="#indicator">Hover Effect</a></li>
                 <li><a href="#filter">CSS Filter</a></li>
             </ul>
+        </div>
+        <div>
             <h2>
                 <a href="#breyer">Corvin Breyer</a>
             </h2>
             <ul>
                 <li><a href="#loading">Lade-Animation</a></li>
-                <li><a href="#slider">Slider</a></li>
+                <li><a href="#slider-c">Slider</a></li>
                 <li><a href="#highlight">Element Highlights</a></li>
                 <li><a href="#progress">Fortschrittsbalken</a></li>
                 <li><a href="#accordeon">Accordeon</a></li>
                 <li><a href="#project">Projekt Fortschritt</a></li>
+            </ul>
+        </div>
+        <div>
+            <h2>
+                <a href="#heckmann">Goetz Heckmann</a>
+            </h2>
+            <ul>
+                <li><a href="#starwars">Star Wars</a></li>
+                <li><a href="#burger">Burger Menu</a></li>
             </ul>
         </div>
     </nav>
@@ -263,8 +275,8 @@
         <h3>Radio Button Slider</h3>
         <div class="weiss container">
             <div class="weiss code">
-                    <pre>
-                        <code>
+                <pre>
+                    <code>
 .slider-container {
     display: flex;
     align-items: center;
@@ -340,8 +352,8 @@ input[id="6"]:checked ~ .slider {
     z-index: 1;
     transition: .25s ease-out;
 }
-                        </code>
-                    </pre>
+                    </code>
+                </pre>
             </div>
             <div class="weiss example">
                 <div class="slider-container">
@@ -739,19 +751,16 @@ input[id="6"]:checked ~ .slider {
 
                 </div>
                 <div class="klemm example">
-                    
-                                <div class="clock">
-                                    <div class="twelve"></div>
-                                    <div class="three"></div>
-                                    <div class="six"></div>
-                                    <div class="nine"></div>
-                                    <div class="center"></div>
-                                    <div class="hour"></div>
-                                    <div class="minute"></div>
-                                    <div class="second"></div>
-                                  </div>
-            
-                      
+                    <div class="clock">
+                        <div class="twelve"></div>
+                        <div class="three"></div>
+                        <div class="six"></div>
+                        <div class="nine"></div>
+                        <div class="center"></div>
+                        <div class="hour"></div>
+                        <div class="minute"></div>
+                        <div class="second"></div>
+                      </div>
                 </div>
             </div>
             <div class="klemm description">
@@ -768,7 +777,6 @@ input[id="6"]:checked ~ .slider {
                         <h5>Bewegung</h5>
                         <p>Die Bewegung ist eine einfache animation die nur das keyframe: <code>transform: rotate(360deg);</code> verwendet. Die Länge der Animation bestimmt wie schnell sich die Zeiger drehen.</p>
                     </li>
-                    
                 </ol>
             </div>
         </div>
@@ -777,14 +785,14 @@ input[id="6"]:checked ~ .slider {
         <h3>Drehende Uhr</h3>
         <div class="klemm container">
             <div class="klemm code">
-                <code>
-                    <pre>
+                <pre>
+                    <code>
 .bild:hover{
     filter: blur(5px) brightness(90%) invert(100%);
     transition: filter 1s;
 }
-                    </pre>
-                </code>
+                    </code>
+                </pre>
 
             </div>
             <div class="klemm example">
@@ -863,7 +871,6 @@ input[id="6"]:checked ~ .slider {
 
                 </div>
                 <div class="breyer example">
-
                     <div class="page" head="Lade-Animation">
                         <div class="center">
                             <p>Seite lädt...</p>
@@ -923,7 +930,7 @@ input[id="6"]:checked ~ .slider {
 
 
         <!----------------------------------------------Slider---------------------------------------------------------------------->
-        <div id="slider">
+        <div id="slider-c">
             <h3>Slider</h3>
             <div class="breyer container">
                 <div class="breyer code">
@@ -1437,9 +1444,9 @@ input[id="6"]:checked ~ .slider {
     <div id="heckmann">
         <h2>Goetz Heckmann</h2>
     <!----------------------------------------------Anfang Star Wars ---------------------------------------------------------------------->
-        <div id="StarWars">
+        <div id="starwars">
             <h3>Star Wars Opening</h3>
-            <div class="heckmann container">
+            <div class="weiss container">
              <div class="weiss code">
             <pre>
                 <code>  
@@ -1593,7 +1600,7 @@ img {
                 </code>
             </pre>
         </div>
-        <div class="weiss example">
+        <div class="heckmann example">
             <div class="starwars-demo">
                 <img src="assets/star.jpg" alt="Star" class="star">
                 <img src="assets/wars.jpg" alt="Wars" class="wars">
@@ -1611,7 +1618,7 @@ img {
      </div>
      </div>
         
-<div id="BurgerMENU">
+<div id="burger">
     <h3>Burger Menu</h3>
     <div class="weiss container">
         <div class="weiss code">
@@ -1697,10 +1704,6 @@ img {
 </div>
  
     </div>
-</body>
-
-</html>
-
 </body>
 
 </html>

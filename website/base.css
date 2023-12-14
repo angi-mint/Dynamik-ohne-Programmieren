@@ -415,6 +415,10 @@ input[id="6"]:checked ~ .slider {
 ul {
     list-style: none;
 }
+
+ul, ol {
+    margin-left: 0.5em;
+}
 html {
     color: #212529;
     font-family: sans-serif;
@@ -428,6 +432,7 @@ body {
 
 h1 {
     text-align: center;
+    margin: 25px 0;
 }
 
 .element {
@@ -438,8 +443,45 @@ h1 {
 header {
     width: 100%;
     top: 0;
+    margin-bottom: 90px;
 }
 
+h5 {
+    font-size: 20px;
+}
+
+h2 {
+    margin: 40px auto 0;
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 2px solid #0004;
+    width: 60%;
+}
+
+nav {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.description li {
+    margin: 20px 0;
+}
+
+.menu h2 {
+    margin: 20px 0 10px 0;
+    text-align: left;
+}
+
+.menu li {
+    list-style: '› ';
+}
+
+.container > div {
+    margin: 25px 0;
+    border: 2px solid #0000;
+    box-shadow: 0 0 20px #0004;
+}
 
 /*-------------------------------------------Paul Klemm---------------------------------------------------*/
 /*----------------------------------------------Drehende Uhr----------------------------------------------------------------------*/
@@ -715,12 +757,12 @@ header {
   
   .starwars-demo {
     perspective: 800px;
-    transform-style: preserve3d;
+    transform-style: preserve-3d;
     
   }
   
   
-  body {
+  .heckmann {
     background-image: url("assets/Sterne.jpg");
     background-position: center;
     background-repeat: no-repeat;
