@@ -1169,6 +1169,115 @@ input[id="6"]:checked ~ .slider {
         </div>
         <!----------------------------------------------Ende Fortschrittsbalken---------------------------------------------------------------------->
 
+
+
+        <!----------------------------------------------Accordeon---------------------------------------------------------------------->
+        <div id="accordeon">
+            <h3>Accordeon</h3>
+            <div class="breyer container">
+                <div class="breyer code">
+                    <pre>
+                        <code>
+&lt;div class="page bgbars" head="Accordeon"&gt;
+    &lt;div class="center"&gt;
+        &lt;svg width="300" height="300"&gt;
+            &lt;!-- Section 1 --&gt;
+            &lt;rect width="100%" height="50" fill="#fa5252" id="section1"&gt;
+                &lt;animate attributeName="height" from="50" to="50" dur="0.5s" fill="freeze" /&gt;
+            &lt;/rect&gt;
+            &lt;text x="10" y="32" font-family="Arial" font-size="20" fill="#212529" font-weight="bold"&gt;Section 1&lt;/text&gt;
+            &lt;rect x="0" y="50" width="100%" height="0" fill="#ffe3e3" id="section1Content"&gt;
+                &lt;animate attributeName="height" from="0" to="100" dur="0.5s" fill="freeze" begin="section1.click" /&gt;
+                &lt;animate attributeName="height" from="100" to="0" dur="0.5s" fill="freeze" begin="section1Content.click" /&gt;
+            &lt;/rect&gt;
+
+            &lt;!-- Section 2 --&gt;
+            &lt;rect y="100" width="100%" height="50" fill="#15aabf" id="section2"&gt;
+                &lt;animate attributeName="height" from="50" to="50" dur="0.5s" fill="freeze" /&gt;
+            &lt;/rect&gt;
+            &lt;text x="10" y="132" font-family="Arial" font-size="20" fill="#212529" font-weight="bold"&gt;Section 2&lt;/text&gt;
+            &lt;rect x="0" y="150" width="100%" height="0" fill="#c5f6fa" id="section2Content"&gt;
+                &lt;animate attributeName="height" from="0" to="100" dur="0.5s" fill="freeze" begin="section2.click" /&gt;
+                &lt;animate attributeName="height" from="100" to="0" dur="0.5s" fill="freeze" begin="section2Content.click" /&gt;
+            &lt;/rect&gt;
+
+            &lt;!-- Section 3 --&gt;
+            &lt;rect y="200" width="100%" height="50" fill="#82c91e" id="section3"&gt;
+                &lt;animate attributeName="height" from="50" to="50" dur="0.5s" fill="freeze" /&gt;
+            &lt;/rect&gt;
+            &lt;text x="10" y="232" font-family="Arial" font-size="20" fill="#212529" font-weight="bold"&gt;Section 3&lt;/text&gt;
+            &lt;rect x="0" y="250" width="100%" height="0" fill="#e9fac8" id="section3Content"&gt;
+                &lt;animate attributeName="height" from="0" to="100" dur="0.5s" fill="freeze" begin="section3.click" /&gt;
+                &lt;animate attributeName="height" from="100" to="0" dur="0.5s" fill="freeze" begin="section3Content.click" /&gt;
+            &lt;/rect&gt;
+        &lt;/svg&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                        </code>
+                    </pre>
+
+                </div>
+                <div class="breyer example">
+
+                    <div class="page bgbars" head="Accordeon">
+                        <div class="center">
+                            <svg width="300" height="300">
+                                <!-- Section 1 -->
+                                <rect width="100%" height="50" fill="#fa5252" id="section1">
+                                    <animate attributeName="height" from="50" to="50" dur="0.5s" fill="freeze" />
+                                </rect>
+                                <text x="10" y="32" font-family="Arial" font-size="20" fill="#212529" font-weight="bold">Section 1</text>
+                                <rect x="0" y="50" width="100%" height="0" fill="#ffe3e3" id="section1Content">
+                                    <animate attributeName="height" from="0" to="100" dur="0.5s" fill="freeze" begin="section1.click" />
+                                    <animate attributeName="height" from="100" to="0" dur="0.5s" fill="freeze" begin="section1Content.click" />
+                                </rect>
+
+                                <!-- Section 2 -->
+                                <rect y="100" width="100%" height="50" fill="#15aabf" id="section2">
+                                    <animate attributeName="height" from="50" to="50" dur="0.5s" fill="freeze" />
+                                </rect>
+                                <text x="10" y="132" font-family="Arial" font-size="20" fill="#212529" font-weight="bold">Section 2</text>
+                                <rect x="0" y="150" width="100%" height="0" fill="#c5f6fa" id="section2Content">
+                                    <animate attributeName="height" from="0" to="100" dur="0.5s" fill="freeze" begin="section2.click" />
+                                    <animate attributeName="height" from="100" to="0" dur="0.5s" fill="freeze" begin="section2Content.click" />
+                                </rect>
+
+                                <!-- Section 3 -->
+                                <rect y="200" width="100%" height="50" fill="#82c91e" id="section3">
+                                    <animate attributeName="height" from="50" to="50" dur="0.5s" fill="freeze" />
+                                </rect>
+                                <text x="10" y="232" font-family="Arial" font-size="20" fill="#212529" font-weight="bold">Section 3</text>
+                                <rect x="0" y="250" width="100%" height="0" fill="#e9fac8" id="section3Content">
+                                    <animate attributeName="height" from="0" to="100" dur="0.5s" fill="freeze" begin="section3.click" />
+                                    <animate attributeName="height" from="100" to="0" dur="0.5s" fill="freeze" begin="section3Content.click" />
+                                </rect>
+                            </svg>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="breyer description">
+                <ol>
+                    <li>
+                        <h5>Allgemein</h5>
+                        <p>Dieses Beispiel zeigt ein interaktives Accordeon-Element. Durch Klicken auf den Head-Teil erscheint der Inhalt des jeweiligen Accordeon-Teils mit einer Eingangsanimation direkt darunter. Durch Klicken auf den Inhalts-Teil verschwindet dieser wieder mit einer Ausgangsanimation wieder.</p>
+                    </li>
+                    <li>
+                        <h5>Anwendungen</h5>
+                        <p>Die Animation eignet sich für Informationsboxen oder alternativ für Säulen eines Artes Balkendiagramm. Beispielsweise kann durch Klicken auf eine Kategorie danach die Säule des Diagramms ausgefahren/gezeigt werden.</p>
+                    </li>
+                    <li>
+                        <h5>Funktion</h5>
+                        <p>Der Inhalt besteht aus einem Rechteck mit der Höhe 0. Bei Klicken auf das bestimmte Rechteck (Head-Bereich oder Inhalt-Bereich) wird die Animation über eine ID angesprochen und gestartet. Mit dem Attribut fill="freeze" wird die Animation nach Ende nicht wiederholt und verbleibt ungeändert.</p>
+                    </li>
+
+                </ol>
+            </div>
+        </div>
+        <!----------------------------------------------Ende Accordeon---------------------------------------------------------------------->
+
         
     </div>
     <!---------------------------------------------- Ende Corvin Breyer---------------------------------------------------------------------->
