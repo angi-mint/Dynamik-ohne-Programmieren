@@ -1,4 +1,4 @@
-/* LINH WEISS */
+/* WEISS */
 
 .container {
     display: flex;
@@ -21,7 +21,7 @@
     margin-left: 5px;
 }
 
-/* Scroll Indicator - Linh Weiss*/
+/* SCROLL INDICATOR - WEISS */
 @supports (height: 100vh) {
     .scroll-indicator {
         position: absolute;
@@ -43,11 +43,7 @@
     }
 }
 
-/* SCROLL INDIKATOR HINTERGRUND*/
-input[id="no-repeat"]:checked ~ .indicator-changer {
-    background-repeat: no-repeat;
-}
-
+/* SCROLL INDICATOR BACKGROUND */
 input[id="transparent"]:checked ~ .indicator-changer {
     background: linear-gradient(to right top, #e4514f, #5400ff 50%, transparent 50%);
 }
@@ -67,15 +63,15 @@ input[id="width"]:checked ~ .indicator-changer {
     height: 800px;
 }
 
-/* FOTO WÜRFEL START*/
+/* 3D CUBE - WEISS*/
 
 * {
-    --image-1: url("/css-only/assets/sunset1.jpg");
-    --image-2: url("/css-only/assets/sunset2.jpg");
-    --image-3: url("/css-only/assets/sunset3.jpg");
-    --image-4: url("/css-only/assets/sunset4.jpg");
-    --image-5: url("/css-only/assets/sunset5.jpg");
-    --image-6: url("/css-only/assets/sunset6.jpg");
+    --image-1: url("assets/sunset1.jpg");
+    --image-2: url("assets/sunset2.jpg");
+    --image-3: url("assets/sunset3.jpg");
+    --image-4: url("assets/sunset4.jpg");
+    --image-5: url("assets/sunset5.jpg");
+    --image-6: url("assets/sunset6.jpg");
     --size: 7em;
 }
 
@@ -159,9 +155,8 @@ input[id="width"]:checked ~ .indicator-changer {
 .radio-button:nth-child(6):checked ~ .cube {
     transform: rotateX(75deg) rotateY(0deg);
 }
-/* FOTO WÜRFEL ENDE*/
 
-/* RADIO BUTTON SLIDER*/
+/* RADIO BUTTON SLIDER - WEISS*/
 
 .slider-container {
     display: flex;
@@ -232,14 +227,183 @@ input[id="6"]:checked ~ .slider {
     height: 100px;
     width: 100px;
     background-color: #acabb0;
-    background-image: linear-gradient(315deg, #acabb0 0%, #e01c34 74%);
+    background-image: linear-gradient(#acabb0 0%, #e01c34 74%);
     color: white;
     border-radius: 10px;
     z-index: 1;
     transition: .25s ease-out;
 }
 
-/* Farben von https://yeun.github.io/open-color/ */
+/* GRAPH - WEISS */
+
+.card {
+    background-color: black;
+    width: 250px;
+    height: 300px;
+    border-radius: 10px;
+    perspective: 1500px;
+    transition: transform .5s ease-in-out, box-shadow .5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transform-style: preserve-3d;
+    box-shadow: 5px 5px 25px 0 rgba(0, 0, 0, .2);
+}
+
+.card h2, .card h3 {
+    transform: translateZ(2px);
+    color: white;
+    transition: transform .5s ease-in-out, opacity .5s ease-in-out;
+}
+
+.card .chart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-style: preserve-3d;
+    transition: transform .5s ease-in-out;
+}
+
+.card .photo {
+    position: absolute;
+    transform: translateZ(1px);
+    background: url("assets/laptop.jpg") no-repeat center center;
+    background-size: cover;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform .5s ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.card .photo:after {
+    position: absolute;
+    content: " ";
+    display: block;
+    background-color: rgba(0, 0, 0, .2);
+    transition: background-color .5s ease-in-out;
+}
+
+.card .bar {
+    will-change: height;
+    width: 15px;
+    height: 1px;
+    transform-origin: bottom;
+    transition: height 0.5s ease-in-out, margin 0.5s ease-in-out, transform 0.5s ease-in-out;
+    transform-style: flat;
+    margin: 7px; /* Abstand zwischen den Balken*/
+    position: relative;
+    background: white linear-gradient(to bottom, #cad3f9 0%, #d9caf9 0%, #caeaf9 100%);
+}
+
+.card .bar:after {
+    display: block;
+    content: "";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    transform: rotateY(90deg);
+    background: grey linear-gradient(to bottom, #feffff 0%, #85d7f7 0%, #4c8596 100%);
+}
+.card .bar:before {
+    display: block;
+    content: "";
+    height: 15px;
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    color: white;
+    text-align: center;
+    transition: color 0.3s ease-in-out;
+}
+
+.card .bar.bar1::before {
+    content: "M";
+}
+.card .bar.bar2::before {
+    content: "T";
+}
+.card .bar.bar3::before {
+    content: "W";
+}
+.card .bar.bar4::before {
+    content: "T";
+}
+.card .bar.bar5::before {
+    content: "F";
+}
+.card .bar span {
+    position: absolute;
+    transform: rotateZ(-90deg);
+    border-radius: 2px;
+    transform-origin: 0 100%;
+    top: 10px;
+    white-space: nowrap;
+    text-align: right;
+    left: 18px;
+    padding: 5px;
+    color: black;
+    font-size: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+#graph:checked + label +.card {
+    transform: rotateX(60deg) translateY(150px);
+    box-shadow: 0 30px 40px 0 rgba(0, 0, 0, 0.75);
+}
+#graph:checked + label + .card .chart {
+    transform: translateZ(40px) translatey(50px);
+}
+#graph:checked + label + .card .bar {
+    transform:  rotateX(-90deg);
+}
+#graph:checked + label + .card .bar.bar1 {
+    height: calc(4 * 20px);
+    transition-delay: 0.3s;
+    margin-top: calc(-4 * 20px);
+}
+#graph:checked + label + .card .bar.bar2 {
+    height: calc(7 * 20px);
+    transition-delay: 0.2s;
+    margin-top: calc(-7 * 20px);
+}
+#graph:checked + label + .card .bar.bar3 {
+    height: calc(10 * 20px);
+    transition-delay: 0.1s;
+    margin-top: calc(-10 * 20px);
+}
+#graph:checked + label + .card .bar.bar4 {
+    height: calc(8 * 20px);
+    transition-delay: .2s;
+    margin-top: calc(-8 * 20px);
+}
+#graph:checked + label + .card .bar.bar5 {
+    height: calc(5 * 20px);
+    transition-delay: 0.3s;
+    margin-top: calc(-5 * 20px);
+}
+
+#graph:checked + label + .card .bar span {
+    opacity: 1;
+    transition-delay: 0.3s;
+}
+#graph:checked + label + .card .photo {
+    transform: translateZ(20px);
+}
+
+#graph:checked + label + .card h2 {
+    opacity: 0;
+    transform: translateZ(40px) translateY(-100px);
+}
+#graph:checked + label + .card h3 {
+    transform: translateZ(60px) translateY(100px);
+}
+
+
+/* WEBSITE LAYOUT */
 
 * {
     margin: 0;
@@ -275,6 +439,7 @@ header {
     width: 100%;
     top: 0;
 }
+
 
 /*-------------------------------------------Paul Klemm---------------------------------------------------*/
 /*----------------------------------------------Drehende Uhr----------------------------------------------------------------------*/
@@ -415,3 +580,254 @@ header {
     transition: filter 1s;
 }
 /*----------------------------------------------Ende Paul Klemm----------------------------------------------------------------------*/
+
+
+/*----------------------------------------------Corvin Breyer----------------------------------------------------------------------*/
+#breyer svg {
+    margin: 15px;
+    background: #fff;
+    display: block;
+}
+
+#breyer .content {
+    padding: 15px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#breyer .page {
+    --acc: #e64980;
+    height: 100%;
+    background: #212529;
+    position: relative;
+    overflow: hidden;
+}
+
+#breyer .page svg {
+    background: #0000;
+}
+
+#breyer .center {
+    display: block;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+#breyer .center p {
+    margin-top: -20px;
+    text-align: center;
+    color: #f1f3f5;
+    font-size: 30px;
+}
+
+#breyer .info {
+    background: #fff;
+    font-size: 20px;
+    max-width: 60%;
+    margin: 0 auto;
+    outline: 10px solid #fff;
+}
+/*----------------------------------------------Ende Corvin Breyer----------------------------------------------------------------------*/
+
+/*-------------------------------------------Goetz Heckmann---------------------------------------------------*/
+/*----------------------------------------------Starwars----------------------------------------------------------------------*/
+
+.star {
+    animation: star 10s ease-out infinite;
+    mix-blend-mode: multiply;
+  }
+.wars {
+    animation: wars 10s ease-out infinite;
+    mix-blend-mode: multiply;
+  }
+  .byline span {
+    animation: spin-letters 10s linear infinite;
+  }
+  .byline {
+    animation: move-byline 10s linear infinite;
+  }
+  
+  /* Keyframes */
+  @keyframes star {
+    0% {
+      opacity: 0;
+      transform: scale(1.5) translateY(-0.75em);
+    }
+    20% {
+      opacity: 1;
+    }
+    89% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: translateZ(-1000em);
+    }
+  }
+  
+  @keyframes wars {
+    0% {
+      opacity: 0;
+      transform: scale(1.5) translateY(0.5em);
+    }
+    20% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: translateZ(-1000em);
+    }
+  }
+  
+  @keyframes spin-letters {
+    0%, 10% {
+      opacity: 0;
+      transform: rotateY(90deg);
+    }
+    30% {
+      opacity: 1;
+    }
+    70%, 86% {
+      transform: rotateY(0);
+      opacity: 1;
+    }
+    95%, 100% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes move-byline {
+    0% {
+      transform: translateZ(5em);
+    }
+    100% {
+      transform: translateZ(0);
+    }
+  }
+  
+  
+  .starwars-demo {
+    perspective: 800px;
+    transform-style: preserve3d;
+    
+  }
+  
+  
+  body {
+    background-image: url("assets/Sterne.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .starwars-demo {
+    height: 17em;
+    left: 50%;
+    position: relative;
+    top: 53%;
+    transform: translate(-50%, -50%);
+    width: 34em;
+  }
+  
+  .byline span {
+    display: inline-block;
+  }
+  
+  img {
+    width: 100%;
+  }
+  
+  .star, .wars, .byline {
+    position: absolute;
+  }
+  
+  .star {
+    top: -0.75em;
+  }
+  
+  .wars {
+    bottom: -0.5em;
+  }
+  
+  .byline {
+    color: #fff;
+    font-family: "ITC Serif Gothic", Lato;
+    font-size: 2.25em;
+    left: -2em;
+    letter-spacing: 0.4em;
+    right: -2em;
+    text-align: center;
+    text-transform: uppercase;
+    top: 29%;
+  }
+  
+  
+  
+  @media only screen and (max-width: 600px) {
+    .starwars-demo {
+      font-size: 10px;
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .starwars-demo {
+      font-size: 7px;
+    }
+  }
+/*----------------------------------------------BurgerMenu----------------------------------------------------------------------*/
+
+.dropdown {
+  position: absolute;
+  top: 20px;
+  right: 20px; 
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  z-index: 1;
+  right: 0;
+}
+
+.menu-item {
+  transition: color 0.3s, background-color 0.3s, padding 0.3s; /* Übergangsregeln hinzugefügt */
+}
+
+/* Hinzugefügter Code für Hover-Effekt */
+.menu-item:hover {
+  color: white;
+  background-color: red;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.dropdown-btn:focus + .dropdown-content {
+  display: block;
+}
+
+.dropdown-btn {
+  cursor: pointer;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 3px 0;
+}
