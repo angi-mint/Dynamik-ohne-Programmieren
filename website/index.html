@@ -816,12 +816,12 @@ input[id="6"]:checked ~ .slider {
                     <li>
                         <h5>Zeiger</h5>
                         <p>Die Zeiger sind absolut in der Uhr positionierte div's. In diesen wird ein div mit den
-                            Abmessungen des Zeigers eingefügt und ein top abstand gewählt damit sie über die Mitte ragen
+                            Abmessungen des Zeigers eingefügt und ein top Abstand gewählt damit sie über die Mitte ragen
                         </p>
                     </li>
                     <li>
                         <h5>Bewegung</h5>
-                        <p>Die Bewegung ist eine einfache animation die nur das keyframe:
+                        <p>Die Bewegung ist eine einfache Animation die nur das keyframe:
                             <code>transform: rotate(360deg);</code> verwendet. Die Länge der Animation bestimmt wie
                             schnell sich die Zeiger drehen.
                         </p>
@@ -841,6 +841,18 @@ input[id="6"]:checked ~ .slider {
     filter: blur(5px) brightness(90%) invert(100%);
     transition: filter 1s;
 }
+
+filter: blur(5px);
+filter: brightness(0.4);
+filter: contrast(200%);
+filter: drop-shadow(16px 16px 20px blue);
+filter: grayscale(50%);
+filter: hue-rotate(90deg);
+filter: invert(75%);
+filter: opacity(25%);
+filter: saturate(30%);
+filter: sepia(60%);
+
                     </code>
                 </pre>
 
@@ -860,7 +872,9 @@ input[id="6"]:checked ~ .slider {
                     </li>
                     <li>
                         <h5>Bild</h5>
-                        <p>Auf das Bild werden verschiedene Filter angewendet siehe Code</p>
+                        <p>Auf das Bild werden verschiedene Filter angewendet. Oft verwendet sieht man natürlich den Blur Effekt oder auch einen Greyscale Effekt um Elemente als inaktiv zu kennzeichnen.
+                            Kreativ lassen sich natürlich auch Filter wie Hue Rotate verwenden.
+                        </p>
                     </li>
 
 
@@ -913,7 +927,7 @@ input[id="6"]:checked ~ .slider {
     margin-top: -5rem;
     margin-left: -5rem;
     font-size: 2rem;
-    font-family: Raleway, sans-serif;
+    font-family: sans-serif;
     text-align: center;
     color: #fff;
     border-radius: 50%;
@@ -940,16 +954,24 @@ input[id="6"]:checked ~ .slider {
                 <ol>
                     <li>
                         <h5>Hover</h5>
-                        <p>Hover Effekt transition</p>
+                        <p>Hover Effekt dient als startpunkt für alle Animationen</p>
                     </li>
                     <li>
                         <h5>Drehung</h5>
-                        <p>Text mit hintergrund wird gedreht</p>
+                        <p>Das Element wird um die eigene Achse rotiert und gleichzeitig horizontal nach rechts verschoben
+                        </p>
                     </li>
 
                     <li>
-                        <h5>Sliding</h5>
-                        <p>Bild und text werden gegeneinander geslidet</p>
+                        <h5>Transition cubic-bezier</h5>
+                        <p>Eine kubische Bézier-Kurve wird durch vier Kontrollpunkte P0, P1, P2 und P3 definiert. Die Kurve beginnt bei P0 in Richtung P1 und endet bei P3 aus der Richtung von P2. Die Kurve verläuft normalerweise nicht durch P1 oder P2; diese Punkte dienen nur zur Angabe der Richtung der Kurve an ihren Enden.
+                            Entlang dieser Kurve wird das Badge mit dem Text Dynamik verschoben.
+                        </p>
+                    </li>
+                    <li>
+                        <h5>Letter spacing</h5>
+                        <p>Die Geschwindigkeit dieser Transition wird wieder mit einer Bézier-Kurve realisiert so entsteht die flüssige Bewegung
+                        </p>
                     </li>
 
 
